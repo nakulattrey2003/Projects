@@ -1,0 +1,49 @@
+body
+{
+    background-color: #212121;
+    color: white;
+    text-align: center;
+}
+
+button
+{
+    height:29.33px;
+    width: 176px;
+    margin-left: 64px;
+    color: white;
+    background-color: orange;
+    border: 5px solid orange;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h1
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#guide
+{
+    margin-left: 70px;
+}
+
+#results
+{
+    margin-left: 70px;
+    color: orange;
+    font-weight: bold;
+}
+
+button:hover
+{
+    background-color: #212121;
+    color: orange;
+    border: 2px solid orange;
+}
+
+input
+{
+    padding: 5px;
+}
