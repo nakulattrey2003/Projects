@@ -1,0 +1,39 @@
+#content
+{
+    text-align: center;
+}
+
+#boxes
+{
+    display: flex;
+    justify-content: center;
+}
+
+.button
+{ 
+    display: flex;
+    height: 100px;
+    width: 100px;
+    border: 5px solid #212121;
+    margin: 20px;
+}
+
+#greenyellow
+{
+    background-color: greenyellow;
+}
+
+#red
+{
+    background-color: red;
+}
+
+#blue
+{
+    background-color: blue;
+}
+
+#orange
+{
+    background-color: orange;
+}
