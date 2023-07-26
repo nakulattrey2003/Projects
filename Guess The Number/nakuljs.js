@@ -30,7 +30,7 @@ function validate(input)
     else
     {
         prevGuessArray.push(input);
-        if(numOfGuess > 4) 
+        if(numOfGuess > 5) 
         {
             clean(input);
             displayMessage(`😭Game Over. The Random Number was : ${random}, Better Luck Next Time🫂`);
