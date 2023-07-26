@@ -10,7 +10,7 @@ const startOver = document.querySelector("#start"); // new game start karane ke 
 const para = document.createElement('para');
 
 let prevGuessArray = [];
-let numOfGuess = 0;
+let numOfGuess = 1;
 let canPlay = true;
 
 if(canPlay == true)
@@ -30,7 +30,7 @@ function validate(input)
     else
     {
         prevGuessArray.push(input);
-        if(numOfGuess > 10) 
+        if(numOfGuess > 4) 
         {
             clean(input);
             displayMessage(`😭Game Over. The Random Number was : ${random}, Better Luck Next Time🫂`);
@@ -66,7 +66,7 @@ function clean(input)
     userInput.value = ''; // user ke input number ko khali karna hai
     prevGuess.innerHTML = prevGuess.innerHTML + `${input}, `; // extra space le liye space chodi hai
     numOfGuess++;
-    remaining.innerHTML = `${11 - numOfGuess}`;
+    remaining.innerHTML = `${6 - numOfGuess}`;
 }
 
 function displayMessage(message)
@@ -93,7 +93,7 @@ function newGame()
         prevGuessArray = [];
         numOfGuess = 1;
         prevGuess.innerHTML = '';
-        remaining.innerHTML = `${11 - numOfGuess}`;
+        remaining.innerHTML = `${6 - numOfGuess}`;
         userInput.removeAttribute('disabled');
         startOver.removeChild(para);
         canPlay = true;
