@@ -30,7 +30,7 @@ function validate(input)
     else
     {
         prevGuessArray.push(input);
-        if(numOfGuess > 5) 
+        if(numOfGuess >= 5) 
         {
             clean(input);
             displayMessage(`😭Game Over. The Random Number was : ${random}, Better Luck Next Time🫂`);
@@ -53,11 +53,11 @@ function check(input)
     }
     else if(input < random)
     {
-        displayMessage(`Input Number is Lower`);
+        displayMessage(`Give a number Bigger than ${input}`);
     }
     else if(input > random)
     {
-        displayMessage(`Input Number is Higher`);
+        displayMessage(`Give a number Smaller than ${input}`);
     }
 }
 
