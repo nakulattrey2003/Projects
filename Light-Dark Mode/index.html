@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light-Dark Mode (By Nakul Attrey)</title>
+
+    <style>
+        #content
+        {
+            text-align: center;
+        }
+
+        #tap
+        {
+            width: 220px;
+            height: 34px;
+            color: black;
+            background-color: rgb(255, 83, 83);
+            font-weight: 300;
+            border: none;
+            border-radius: 5px;            
+        }
+
+        #tap:hover
+        {
+            color: white;
+        }
+
+        #Mode,#but
+        {
+            color: red;
+        }
+    </style>
+</head>
+<body style="background-color: white; color: black;">
+    <div id="content"><br><br>
+        <h1 id="header">Light/Dark <span id="Mode">Mode</span></h1><br><br><br>
+        <p id="para">Tap on the <span id="but">button</span> to toggle between Light and Dark Mode</p><br>
+        <button id="tap" class="mode">DARK MODE</button>
+    </div>
+</body>
+
+<script>
+    const body = document.body;
+    const button = document.querySelector(".mode");
+    const toggle = document.querySelector("#tap").addEventListener('click',function()
+    {
+        if(body.style.background === 'white')
+        {
+            body.style.background = 'black';
+            body.style.color = 'white';
+            body.style.transition = '2s';
+            button.innerHTML = `LIGHT MODE`;
+        }
+        else
+        {
+            body.style.background = 'white';
+            body.style.color = 'black';
+            body.style.transition = '2s';
+            button.innerHTML = `DARK MODE`;
+        }
+    });
+</script>
+
+</html>
