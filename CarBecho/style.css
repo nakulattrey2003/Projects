@@ -146,7 +146,7 @@ header
     min-height: 640px;
     display: flex;
     align-items: center;
-    background: url(./Car-Background.png);
+    background: url('./Car-Background.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center left;
