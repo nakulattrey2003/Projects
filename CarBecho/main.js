@@ -28,3 +28,24 @@ window.addEventListener('scroll' , () => {
         header.style.zIndex = 'initial';
     }
 });
+
+// Tyepwriter
+const text = document.querySelector(".type1");
+
+const textLoad = () => {
+    setTimeout(() => {
+        text.textContent = "Models";
+    }, 0);
+    setTimeout(() => {
+        text.textContent = "Prices";
+    }, 4000);
+    setTimeout(() => {
+        text.textContent = "Deals";
+    }, 8000);
+    setTimeout(() => {
+        text.textContent = "Colors";
+    }, 12000);
+};
+
+textLoad();
+setInterval(textLoad,12000);
