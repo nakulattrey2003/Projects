@@ -19,7 +19,7 @@ window.addEventListener('scroll' , () => {
     header.classList.toggle('shadow', window.scrollY > 100);
     if(window.scrollY > 100)
     {
-        header.style.background = 'white';
+        header.style.background = '#E9EDFF';
         header.style.zIndex = '1000';
     }
     else
