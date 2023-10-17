@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --orange-color: #FF5733;
+}
+
+a
+{
+    text-decoration: none;
+    color: rgb(97,97,97);
+}
+
+li
+{
+    list-style: none;
+}
+
+.btns
+{
+    padding: 10px 20px;
+    margin-right: 6px;
+    background: transparent;
+    border-radius: 3px;
+    border: 0.6px solid var(--orange-color);
+    color: #323232;
+    cursor: pointer;
+}
