@@ -1,0 +1,84 @@
+// average game 
+#include <iostream>
+#include <string>
+#include <map>
+#include <queue>
+using namespace std;
+
+int main() {
+    cout<<"Each participant will input a number between 1 and 100, inclusive.\nThe average of all the numbers entered by the players will be added up and multiplied by 0.8.\nThe winner of the game will be the one whose guess is the closest.";
+    int n;
+    cout << "Enter Number of Players: ";
+    cin >> n;
+    cout << endl;
+    string players[n];
+    for(int i = 0; i < n; ++i) {
+        cout << "Enter Player " << i + 1 << " name: ";
+        cin >> players[i];
+    }
+    cout << endl;
+
+    int numberOfRounds;
+    cout << "Enter Number of Rounds: ";
+    cin >> numberOfRounds;
+    cout << endl;
+
+    string winnerarray[numberOfRounds];
+    int ll = 0;
+    int originalNumberOfRounds = numberOfRounds;
+    int roundNumber=1;
+
+    while(numberOfRounds--) 
+    {
+        cout<<"Round "<<roundNumber<<endl;
+        roundNumber++;
+        int gameRound[n];
+        for(int i = 0; i < n; ++i) 
+        {
+            cout << "Enter " << players[i] << "'s number: ";
+            cin >> gameRound[i];
+            while(gameRound[i] < 1 || gameRound[i] > 100) 
+            {
+                cout << "Please enter a number between 1 and 100: ";
+                cin >> gameRound[i];
+            }
+        }
+
+        int sum = 0;
+        for(int i = 0; i < n; ++i) 
+        {
+            sum += gameRound[i];
+        }
+        sum=sum/n;
+        double target = 0.8 * sum;
+
+        int minDiff = abs(target - gameRound[0]);
+        string winnername = players[0];
+        for(int i = 1; i < n; ++i) 
+        {
+            int diff = abs(target - gameRound[i]);
+            if(diff < minDiff) 
+            {
+                minDiff = diff;
+                winnername = players[i];
+            }
+        }
+        winnerarray[ll++] = winnername;
+        cout<<endl;
+    }
+
+    map<string, int> m;
+    priority_queue<pair<int, string>> pq;
+    for(int i = 0; i < originalNumberOfRounds; ++i)
+    {
+        m[winnerarray[i]]++;
+    }
+    for(auto it : m) {
+        pq.push({it.second, it.first});
+    }
+
+    string winnerOfTheGame = pq.top().second;
+    cout << "Winner of the Game: " << winnerOfTheGame << endl;
+
+    return 0;
+}
