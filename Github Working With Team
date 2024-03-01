@@ -1,0 +1,24 @@
+## Github
+
+# Working with team 
+
+Git Clone (All the changes are done directly to the project)
+    > Make a repository
+    > Add collaborators
+    > For someone to change on that project
+        > open gitbash where you want to save your project
+        > write git clone https://github.com/githubUsername/nameOfTheRepo.git  // this link you will get from clicking on code on you repo ![clone link](image.png)
+        > then go to the file in editor (like vs code)
+        > make the changes you want to do
+        > then go to gitbash and write add . (this will place the changes to staging area)
+        > then write git commit -m "Message you want to write inside these double inverted commas" // this made the changes in the local repository
+        > write git push origin main (this will make changes in the main branch, but you need access of the owner for it)
+
+Git Fork (The project is copied on your remote Repo and all the changes are done on your own Repo and not on the Main Original project)
+    > Choose the Project online what you want to copy
+    > Open it and click fork button ![fork](image-1.png) (you cannot click the button of your own repository)
+    > Project will be there on your own Account
+    > You want changes to be done on Original Project then make a pull request on github stating what you had changed ![pull request](image-2.png)
+    > If the owner think the change is ok, then he will accept the pull request.
+
+
