@@ -2,6 +2,17 @@
 
 # Working with team 
 
+Pushing the personal project to the Github
+    > Open a terminal or command prompt.
+    > Navigate to the root folder of your project using the cd command.
+    > Run the following command to initialize a new Git repository:
+        > git init
+        > git add .
+        > git commit -m "Initial commit"
+        > git remote add origin https://github.com/username/repository-name.git
+        > git push -u origin master
+Refresh your GitHub repository page, and you should see your project files there.
+
 Git Clone (All the changes are done directly to the project)
     > Make a repository
     > Add collaborators
